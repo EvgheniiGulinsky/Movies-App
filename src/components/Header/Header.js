@@ -11,6 +11,7 @@ export default class Header extends Component {
     return (
       <Tabs
         defaultActiveKey="1"
+        activeKey={tab}
         centered
         onChange={(activeKey) => {
           if (activeKey !== tab) {

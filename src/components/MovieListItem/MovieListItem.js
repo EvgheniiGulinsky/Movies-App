@@ -38,7 +38,7 @@ export default class MovieListItem extends Component {
             });
           });
           return (
-            <Card style={{ width: 454, height: 281 }} key={id} hoverable bodyStyle={{ padding: '0' }}>
+            <Card  key={id} hoverable bodyStyle={{ padding: '0' }}>
               <div className="movie-card__content">
                 {posterPath === null ? (
                   <img className="movie-card__poster" alt="no poster" src="../../assets/no_poster.jpg" />
@@ -61,7 +61,7 @@ export default class MovieListItem extends Component {
                     {voteAverage}
                   </div>
                   <p className="date">
-                    {releaseDate instanceof Date
+                    {new Date(releaseDate)
                       ? `${format(new Date(releaseDate), 'MMMM')} ${getDate(new Date(releaseDate))}, ${getYear(
                           new Date(releaseDate)
                         )}`

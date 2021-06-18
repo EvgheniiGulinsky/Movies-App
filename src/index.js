@@ -54,10 +54,11 @@ class App extends Component {
     }
   }, 700);
 
-  onErrorHandle = () => {
+  onErrorHandle = (message) => {
     this.setState({
       error: true,
       loading: false,
+      message
     });
   };
 
@@ -66,12 +67,14 @@ class App extends Component {
       this.setState({
         error: false,
         page: 1,
+        tab: '1'
       });
     } else {
       this.setState({
         error: false,
         page: 1,
         searchInput: 'return',
+        tab: '1'
       });
       this.moviesFetch();
     }
@@ -85,12 +88,20 @@ class App extends Component {
   };
 
   onTabChange = (newTab) => {
-    this.setState({
-      loading: true,
-      tab: newTab,
-      page: 1,
-    });
-    this.ratedMoviesFetch();
+    this.setState({ tab: newTab })
+    if(this.state.ratedMovies.length === 0 && newTab === '2'){
+      this.onErrorHandle('You didnt rate any movies yet')
+    }
+    else{
+      this.setState({
+        loading: true,
+        page: 1,
+      });
+      this.ratedMoviesFetch();
+      if(newTab === '1'){
+        this.moviesFetch()
+      }
+    }
   };
 
   onPageSwitch = (page) => {

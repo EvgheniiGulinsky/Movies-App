@@ -4,3 +4,10 @@
   background: #f7f7f7;
   margin: auto;
 }
+
+@media (max-width: 567px){
+  .app{
+    width: 420px;
+    height: 1755px
+  }
+}

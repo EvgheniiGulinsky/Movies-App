@@ -12,7 +12,6 @@ export default class InputField extends Component {
     return tab === '1' ? (
       <Search
         value={searchInput}
-        maxLength={938}
         size="large"
         onChange={(event) => {
           onInputChange(event.target.value);

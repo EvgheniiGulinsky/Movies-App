@@ -1,0 +1,9 @@
+.ant-input{
+    max-width: 938px;
+}
+
+@media(max-width: 576px){
+    .ant-input{
+        max-width: 388px
+    }
+}

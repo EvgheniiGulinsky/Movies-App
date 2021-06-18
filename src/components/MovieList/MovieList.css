@@ -17,3 +17,12 @@
   top: 200px;
   transform: scale(2);
 }
+
+@media (max-width : 576px) {
+  .movie-list{
+    width: 420px;
+    height: 1755px;
+    padding: 19px 13px 19px 13px;
+  }
+
+}

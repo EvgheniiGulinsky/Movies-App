@@ -37,7 +37,7 @@ export default class MovieList extends Component {
     });
 
     const movieCards = movies.map((movie) => (
-      <Col span={12} key={movie.id} className="card-column">
+      <Col xs={24} sm={12} key={movie.id} className="card-column">
         <MovieListItem
           title={movie.title}
           id={movie.id}
@@ -53,7 +53,7 @@ export default class MovieList extends Component {
     ));
 
     const ratedMovieCards = ratedMovies.map((movie) => (
-      <Col span={12} key={movie.id} className="card-column">
+      <Col xs={24} sm={12} key={movie.id} className="card-column">
         <MovieListItem
           title={movie.title}
           id={movie.id}

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import 'antd/dist/antd.css';
 
 const ErrorMessage = ({ onCloseHandle, message }) => (
-  <Alert message={message} description={message} type="error" closable onClose={onCloseHandle} />
+  <Alert message='Error' description={message} type="error" closable onClose={onCloseHandle} />
 );
 
 ErrorMessage.propTypes = {

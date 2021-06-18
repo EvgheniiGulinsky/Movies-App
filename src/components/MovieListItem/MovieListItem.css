@@ -1,10 +1,11 @@
 .movie-card {
   padding: 0;
-  width: 454px;
-  height: 281px;
+
 }
 .movie-card__content {
   display: flex;
+  max-width: 454px;
+  max-height: 281px;
 }
 .movie-card__description {
   margin-left: 20px;
@@ -18,7 +19,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 20px;
   color: #000000;
   max-width: 200px;
 }
@@ -84,5 +85,31 @@
 .ant-rate {
   font-size: 16px;
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
+}
+@media (max-width : 576px) {
+  .ant-card-body{
+    width: 387px;
+    height: 245px;
+  }
+  .movie-card__poster{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 60px;
+    height: 91px
+  }
+  .movie-card__description{
+    width: 367px; 
+    height: 92px;
+    margin: 0px 10px 40px 10px;
+  }
+  .title{
+    margin-top: 4px;
+    margin-bottom: 0px;
+  }
+  .description{
+    margin-top: 15px;
+    margin-left: -69px;
+    width: 371px;
+  }
 }
